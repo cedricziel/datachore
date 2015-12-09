@@ -2,18 +2,19 @@
 
 namespace Datachore\Type;
 
-class BlobKey implements \Datachore\TypeInterface
+use Datachore\TypeInterface;
+
+class BlobKey implements TypeInterface
 {
-	protected $_val = null;
-	
-	
-	public function get()
-	{
-		return $this->_val;
-	}
-	
-	public function set($value)
-	{
-		$this->_val = $value;
-	}
+    protected $_val = null;
+
+    public function get()
+    {
+        return $this->_val;
+    }
+
+    public function set($value)
+    {
+        $this->_val = $value;
+    }
 }

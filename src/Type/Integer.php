@@ -2,18 +2,28 @@
 
 namespace Datachore\Type;
 
-class Integer implements \Datachore\TypeInterface
+use Datachore\TypeInterface;
+
+class Integer implements TypeInterface
 {
-	protected $_val = null;
-	
-	
-	public function get()
-	{
-		return $this->_val;
-	}
-	
-	public function set($value)
-	{
-		$this->_val = $value;
-	}
+    /**
+     * @var int
+     */
+    protected $_val = null;
+
+    /**
+     * @return int
+     */
+    public function get()
+    {
+        return $this->_val;
+    }
+
+    /**
+     * @param int $value
+     */
+    public function set($value)
+    {
+        $this->_val = intval($value);
+    }
 }

@@ -2,18 +2,28 @@
 
 namespace Datachore\Type;
 
-class Double implements \Datachore\TypeInterface
+use Datachore\TypeInterface;
+
+class Double implements TypeInterface
 {
-	protected $_val = null;
-	
-	
-	public function get()
-	{
-		return $this->_val;
-	}
-	
-	public function set($value)
-	{
-		$this->_val = $value;
-	}
+    /**
+     * @var float
+     */
+    protected $_val = null;
+
+    /**
+     * @return float
+     */
+    public function get()
+    {
+        return $this->_val;
+    }
+
+    /**
+     * @param $value
+     */
+    public function set($value)
+    {
+        $this->_val = doubleval($value);
+    }
 }
